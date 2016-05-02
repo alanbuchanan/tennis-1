@@ -17,9 +17,9 @@ class Main extends React.Component {
     }
 
     render() {
-        let displayIfShowingMore = {display: this.state.showingMore ? 'flex' : 'none'}
         return (
             <div className="tennis">
+                <div className="status">1st Quarter Time Out</div>
                 <div className="wrapper" id="wrapper">
                     <div className="set-titles">
                         <div></div>

@@ -16,9 +16,11 @@ $splitpoint: 500px;
   * {
     display: flex;
   }
+  max-width: 650px;
   border: 1px solid red;
   display: flex;
   flex-flow: column;
+  justify-content: center;
 }
 
 .set-titles,
@@ -133,6 +135,13 @@ $splitpoint: 500px;
   .hide {
     display: none;
   }
+
+
+  .status {
+    display: flex;
+    justify-content: center;
+  }
+
 
 }
 
