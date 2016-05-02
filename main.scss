@@ -62,6 +62,7 @@ $splitpoint: 500px;
 .empty,
 .serving-circle-container {
   width: 10px;
+  color: $color-bright;
 }
 
 .player-a,
@@ -129,6 +130,10 @@ $splitpoint: 500px;
     }
   }
 
+  .hide {
+    display: none;
+  }
+
 }
 
 .player-a,
@@ -148,7 +153,7 @@ $splitpoint: 500px;
   height: 0;
   border-style: solid;
   border-width: 0 20px 20px 0;
-  border-color: transparent darkseagreen transparent transparent;
+  border-color: transparent $color-bright transparent transparent;
 }
 
 .active {
@@ -157,9 +162,6 @@ $splitpoint: 500px;
 
 .active-set {
   color: $color-bright;
-}
-
-.has-timer {
   display: flex;
   flex-flow: row wrap;
 }
@@ -173,3 +175,4 @@ button {
     display: none;
   }
 }
+
