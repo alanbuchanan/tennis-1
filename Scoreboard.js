@@ -34,8 +34,8 @@ class Main extends React.Component {
                     </div>
                     <div className="player-a">
                         <div>
-                            <div>Bertie Davieslongname</div>
-                            <div>Jane Fonda</div>
+                            <div>Setkin, Aldic</div>
+                            <div>Williams, Serena</div>
                         </div>
                         <div className="serving-circle-container">
                             <i className="fa fa-circle" aria-hidden="true"></i>
@@ -47,8 +47,8 @@ class Main extends React.Component {
                     </div>
                     <div className="player-b">
                         <div>
-                            <div>Albert Einstein</div>
-                            <div>Karen Joggers</div>
+                            <div>Molchanov, Denys</div>
+                            <div>Halep, Simona</div>
                         </div>
                         <div className="serving-circle-container"></div>
                         <div>15</div>
