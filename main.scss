@@ -1,3 +1,9 @@
+$color-text-primary: white;
+$color-text-secondary: grey;
+$color-bright: yellowgreen;
+$color-dark: darkgrey;
+$splitpoint: 500px;
+
 * {
   box-sizing: border-box;
 }
@@ -16,7 +22,8 @@
 }
 
 .set-titles,
-[class^="player"] {
+.player-a,
+.player-b {
   display: flex;
   flex-flow: row;
 
@@ -32,10 +39,23 @@
     justify-content: center;
     align-items: flex-end;
   }
+}
+
+.player-a,
+.player-b {
   & > div:not(:nth-of-type(1)):not(:nth-of-type(2)) {
     justify-content: center;
     width: 70px;
     height: 70px;
+  }
+}
+
+.set-titles {
+  & > div:not(:nth-of-type(1)):not(:nth-of-type(2)) {
+    justify-content: center;
+    width: 70px;
+    height: 50px;
+    align-items: flex-start;
   }
 }
 
@@ -51,7 +71,7 @@
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: $splitpoint) {
   .wrapper {
     flex-flow: row;
     justify-content:center;
@@ -59,7 +79,7 @@
   .wrapper > * {
     flex-flow: column wrap;
     & > div:first-of-type {
-      width: 80px;
+      width: 70px;
       font-size: 20px;
     }
   }
@@ -78,6 +98,9 @@
   .player-b {
       text-align: center;
       justify-content: center;
+    > div:first-of-type {
+      align-self: flex-start;
+    }
 
   }
 
@@ -92,10 +115,61 @@
   }
 
   .set-titles,
-  [class^="player"] {
+  .player-a,
+  .player-b {
     & div:first-of-type {
       align-items: center;
     }
   }
 
+  .set-titles {
+    & > div:not(:nth-of-type(1)):not(:nth-of-type(2)) {
+      height: 70px;
+      align-items: center;
+    }
+  }
+
+}
+
+.player-a,
+.player-b,
+.set-titles {
+  > * {
+    position: relative;
+  }
+}
+
+.won:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 20px 20px 0;
+  border-color: transparent darkseagreen transparent transparent;
+}
+
+.active {
+  background-color: $color-bright;
+}
+
+.active-set {
+  color: $color-bright;
+}
+
+.has-timer {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+button {
+  width: 100%;
+  background-color: black;
+  color: $color-text-primary;
+  padding: 10px 0;
+  @media(min-width: $splitpoint) {
+    display: none;
+  }
 }
